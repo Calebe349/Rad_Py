@@ -1,0 +1,10 @@
+# 1. Elabore um programa em Python que leia uma cadeia de DNA e gera a cadeia
+#inversa. Faça a leitura da cadeia utilizando arquivo txt. Exemplo:
+#Entrada: AATCTGCAC Saída: CACGTCTAA
+
+with open("dna.txt", "r") as arquivo:
+    dna = arquivo.read().strip()  
+
+dna_inverso = dna[::-1]  
+print(f"Entrada: {dna}")
+print(f"Saída: {dna_inverso}")
