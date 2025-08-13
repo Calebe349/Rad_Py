@@ -1,0 +1,13 @@
+# 3. Faça um programa que Python que lê um texto de um arquivo txt e substitua
+#todos os espaços por underline (_).
+
+
+with open("texto.txt", "r", encoding="utf-8") as arquivo:
+    texto = arquivo.read()
+
+texto_modificado = texto.replace(" ", "_")
+
+with open("texto_underline.txt", "w", encoding="utf-8") as arquivo:
+    arquivo.write(texto_modificado)
+
+print("Arquivo gerado: texto_underline.txt")
