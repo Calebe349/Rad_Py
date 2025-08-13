@@ -1,0 +1,16 @@
+#4. Elabore um script em Python que leia um arquivo contendo frases e insira cada
+#palavra da frase lida em uma lista, sem que haja palavras repetidas. Exemplo: A
+#frase lida de um arquivo: “futebol tequila bola futebol torcida bola goleiro”, deve ir
+#para a lista [“futebol”, “tequila”, “bola”, “torcida”, “goleiro”]
+
+with open("frases.txt", "r", encoding="utf-8") as arquivo:
+    frase = arquivo.read().strip()
+
+palavras = frase.split()
+lista_sem_repeticao = []
+
+for palavra in palavras:
+    if palavra not in lista_sem_repeticao:
+        lista_sem_repeticao.append(palavra)
+
+print(lista_sem_repeticao)
